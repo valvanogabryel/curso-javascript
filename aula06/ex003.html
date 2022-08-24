@@ -58,7 +58,7 @@
         var n1 = Number.parseInt(window.prompt('Digite um número: '))
         var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
         var n3 = Number(window.prompt('Digite um último número: '))
-        var s = n1 + n2 + n3
+        var s = n1 + n2 % n3
         window.alert('A soma dos números é:' + s.toString())
         window.alert(`A soma dos três números é ${s}; e os números escritos foram ${n1}, ${n2} e ${n3}`)
         document.write(`Os números selecionados foram ${n1}, ${n2} e ${n3}.`)
