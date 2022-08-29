@@ -17,14 +17,19 @@
 <body>
     <h1>Teste de soma dinâmica</h1>
     <div>
-        <p>Insira um número aqui:</p>
-        <input type="number" name="num" id="inum1">
+        <label>Insira um número aqui:</label>
+        <input type="number" name="num" id="inum1" max="10" maxlength="2"
+            oninput="isoma.innerHTML = Number(inum1.value) + Number(inum2.value)">
     </div>
     <div>
-        <p>Insira mais um número aqui:</p>
-        <input type="number" name="num2" id="inum2">
+        <label>Insira mais um número aqui:</label>
+        <input type="number" name="num2" id="inum2" max="10" maxlength="2"
+            oninput="isoma.innerHTML = Number(inum1.value) + Number(inum2.value)">
     </div>
-
+    <div>
+        <label for="isoma">A soma dos números é:</label>
+        <output id="isoma">0</output>
+    </div>
 
     <script>
 
