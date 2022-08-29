@@ -13,6 +13,11 @@
 
         }
 
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+
         body {
             font: normal 18pt Arial;
             text-align: center;
@@ -31,11 +36,13 @@
         #soma {
             font: bold 200pt Arial;
             transition: 0.5s;
+            cursor: pointer;
         }
 
         #soma:hover {
             font-weight: bolder;
             text-decoration: underline;
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -58,8 +65,8 @@
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a:`
             soma.innerHTML = `${s}`
-
         }
+
 
 
     </script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        select {
+            margin-top: 50px;
+            padding: 30px;
+        }
+
+        option {
+            font: bold 10pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>País de Origem:</h1>
+    <div>
+        <select name="país" id="país" oninput="mostrarNac()">
+            <option selected value="Brasil">Brasil</option>
+            <option value="Estados Unídos">Estados Unídos</option>
+            <option value="França">França</option>
+            <option value="Finlândia">Finlândia</option>
+        </select>
+        <input type="button" value="Enviar">
+    </div>
+    <div id="res">
+
+    </div>
+
+
+
+    <script>
+        var país = document.getElementById('país')
+        var res = document.getElementById('res')
+
+        function mostrarNac() {
+            if (país.value == 'Brasil') {
+                res.innerText = `Você está morando em ${país.value}. Logo, você é BRASILEIRO`
+            } else {
+                res.innerHTML = `Você está morando em ${país.value}. Logo, você é ESTRANGEIRO`
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
