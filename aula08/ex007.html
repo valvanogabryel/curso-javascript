@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        * {
+            margin: auto;
+            padding: auto;
+
+        }
+
+        body {
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        #res {
+            margin-top: 20px;
+        }
+
+        #soma {
+            font: bold 200pt Arial;
+            transition: 0.5s;
+        }
+
+        #soma:hover {
+            font-weight: bolder;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="num1" id="inum1" max="10" value="0">
+    <input type="number" name="num2" id="inum2" max="10" value="0">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <div id="soma"></div>
+    <script>
+        function somar() {
+            var inum1 = document.getElementById('inum1')
+            var inum2 = document.getElementById('inum2')
+            var res = document.getElementById('res')
+            var somagrande = document.getElementById('soma')
+            var n1 = Number(inum1.value)
+            var n2 = Number(inum2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a:`
+            soma.innerHTML = `${s}`
+
+        }
+
+
+    </script>
+</body>
+
+</html>

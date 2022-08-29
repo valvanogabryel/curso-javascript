@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background: rgb(0, 96, 186);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p class="paragraph">Aqui vai o resultado</p>
+    <p class="paragraph">Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        /* var corpo = document.body
+         var p1 = document.getElementsByTagName('p')[0] //[0] <- para selecionar o primeiro parágrafo. Para o segundo usaria: [1]
+         var p2 = document.getElementsByTagName('p')[1]
+         alert(p2.innerText)
+          var d = document.getElementById('msg')
+           document.write('Está escrito assim: ' + p1.innerText)
+           d.style.background = 'green'
+           // d.innerText = 'Estou aguardando...' 
+           document.getElementById('msg').innerText = 'Olá' 
+           */
+        var d = document.querySelector('div#msg')
+        var p = document.querySelector('p.paragraph')
+        d.style.color = 'blue'
+        p.style.background = 'black'
+    </script>
+</body>
+
+</html>
