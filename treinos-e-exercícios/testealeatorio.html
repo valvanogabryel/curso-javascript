@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treinoaleatóriokkkkkkkk</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Idade Responsiva</h1>
+    <label for="iano">Em que ano você nasceu?</label>
+    <input type="number" name="ano" id="iano" min="1960" max="2022" oninput="calcIdade()"> <br>
+    <label for="iidade">Sua idade é:</label>
+    <output id="iidade">0</output>
+    <script>
+        var ano = document.getElementById('iano')
+        var idade = document.getElementById('iidade')
+        function calcIdade() {
+            let atual = new Date().getFullYear()
+            idade.innerHTML = Number(atual) - Number(ano.value)
+            if (idade.innerHTML > 18) {
+                idade.innerHTML += '<p>Você é de <strong>maior</strong></p>'
+            } else {
+                idade.innerHTML += '<p>Você é de <strong>menor</strong></p>'
+            }
+        }
+    </script>
+</body>
+
+</html>
