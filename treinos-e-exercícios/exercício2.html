@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vota ou não vota :DDDDD</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 15px 0;
+        }
+
+        input {
+            height: 50px;
+            width: 50px;
+            font: bolder 20pt Arial;
+            text-align: center;
+        }
+
+        #resultado {
+            font: 600 50pt monospace;
+            margin-top: 100px;
+            width: auto;
+        }
+
+        #resultado:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Confira se você VOTA ou NÃO</h1>
+    <label for="iidade">Quantos anos você tem?</label>
+    <input type="number" name="idade" id="iidade" required min="0" max="99" maxlength="2" oninput="mostrarVoto()">
+    <div id="resultado"></div>
+
+
+    <script>
+        var idade = document.getElementById('iidade')
+        var res = document.getElementById('resultado')
+        function mostrarVoto() {
+            if (idade.value < 16) {
+                res.innerHTML = 'Não vota.'
+            } else if (idade.value < 18 || idade.value > 65) {
+                res.innerHTML = 'Voto opcional.'
+            } else {
+                res.innerHTML = 'Voto obrigatório.'
+            }
+        }
+    </script>
+</body>
+
+</html>
