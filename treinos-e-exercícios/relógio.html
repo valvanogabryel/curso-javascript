@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relogiao</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            background: black;
+            color: white;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-15px);
+            }
+        }
+
+        @-webkit-keyframes bounce {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-15px);
+            }
+        }
+
+        h1 {
+            margin-bottom: 50px;
+            text-decoration: underline;
+            font-size: 50px;
+        }
+
+        .ghost {
+            animation: bounce 1s infinite alternate;
+            -webkit-animation: bounce 1s infinite alternate;
+        }
+
+        label {
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 15px 50px;
+            margin: 50px auto 10px auto;
+            font: bold 2.5rem monospace;
+            transition: 0.3s ease;
+        }
+
+        label:hover {
+            color: black;
+            background: white;
+        }
+    </style>
+</head>
+
+<body onload="relogio()">
+    <h1 id="saudar" class="ghost">...</h1>
+    <label id="relogio" class="active" onclick="diaSem()" onmouseenter="writeIn()"></label>
+    <script>
+        var saudar = document.getElementById('saudar')
+        var data = new Date()
+        var hora = data.getHours()
+        if (hora < 12) {
+            saudar.innerHTML = 'Bom dia!'
+        } else if (hora < 18) {
+            saudar.innerHTML = 'Boa tarde!'
+        } else {
+            saudar.innerHTML = 'Boa noite!'
+        }
+        const diadaSem = document.getElementsByClassName('diaSemanal')
+        function diaSem() {
+            var data = new Date()
+            var diaSemana = data.getDay()
+            var relogio = document.getElementById('relogio')
+            switch (diaSemana) {
+                case 0:
+                    relogio.innerHTML = 'Domingo'
+                    break
+                case 1:
+                    relogio.innerHTML = 'Segunda-feira'
+                    break
+                case 2:
+                    relogio.innerHTML = 'Terça-feira'
+                    break
+                case 3:
+                    relogio.innerHTML = 'Quarta-feira'
+                    break
+                case 4:
+                    relogio.innerHTML = 'Quinta-feira'
+                    break
+                case 5:
+                    relogio.innerHTML = 'Sexta-feira'
+                    break
+                case 6:
+                    relogio.innerHTML = 'Sábado'
+            }
+        }
+        function relogio() {
+            var data = new Date()
+            var horas = data.getHours()
+            var minutos = data.getMinutes()
+            var segundos = data.getSeconds()
+            if (horas < 10) {
+                horas = '0' + horas
+            } else if (minutos < 10) {
+                minutos = '0' + minutos
+            } else if (segundos < 10) {
+                segundos = '0' + segundos
+            }
+            document.getElementById('relogio').innerHTML = horas + ':' + minutos + ':' + segundos
+            window.setInterval('relogio()', 1000)
+        }
+    </script>
+</body>
+
+</html>

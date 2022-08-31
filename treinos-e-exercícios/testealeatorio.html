@@ -31,7 +31,7 @@
         function calcIdade() {
             let atual = new Date().getFullYear()
             idade.innerHTML = Number(atual) - Number(ano.value)
-            if (idade.innerHTML > 18) {
+            if (idade.innerHTML >= 18) {
                 idade.innerHTML += '<p>Você é de <strong>maior</strong></p>'
             } else {
                 idade.innerHTML += '<p>Você é de <strong>menor</strong></p>'
