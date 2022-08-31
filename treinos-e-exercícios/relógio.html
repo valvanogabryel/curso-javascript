@@ -14,25 +14,7 @@
             color: #D9D9D9;
         }
 
-        @keyframes bounce {
-            from {
-                transform: translateY(0px);
-            }
 
-            to {
-                transform: translateY(-15px);
-            }
-        }
-
-        @-webkit-keyframes bounce {
-            from {
-                transform: translateY(0px);
-            }
-
-            to {
-                transform: translateY(-15px);
-            }
-        }
 
         h1 {
             margin-bottom: 50px;
@@ -59,16 +41,21 @@
             color: #404040;
             background: white;
         }
+
+        #relogio {
+            overflow: visible;
+        }
     </style>
 </head>
 
 <body onload="relogio()">
     <h1 id="saudar" class="ghost">...</h1>
-    <label id="relogio" class="active" onclick="diaSem()" onmouseenter="writeIn()"></label>
+    <label id="relogio" class="active" onclick="diaSem(), writeIn()"></label>
     <script>
         var saudar = document.getElementById('saudar')
         var data = new Date()
         var hora = data.getHours()
+
         if (hora < 12) {
             saudar.innerHTML = 'Bom dia!'
         } else if (hora < 18) {
@@ -119,6 +106,7 @@
             document.getElementById('relogio').innerHTML = horas + ':' + minutos + ':' + segundos
             window.setInterval('relogio()', 1000)
         }
+
     </script>
 </body>
 
