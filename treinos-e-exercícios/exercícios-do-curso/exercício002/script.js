@@ -37,24 +37,8 @@ function verificar() {
                 img.setAttribute('src', 'img/foto-idoso-f.png')
             }
         }
-
-
-
-
-
-
+        res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         res.appendChild(img)
     }
-
-
-
-
-
-
-
-
-
-
-
 }
