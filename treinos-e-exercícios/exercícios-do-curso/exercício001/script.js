@@ -4,7 +4,13 @@ function carregar() {
     var data = new Date()
     var hora = data.getHours()
     var minutos = data.getMinutes()
-    msg.innerHTML = `<p>Agora são ${hora}:${minutos} horas!</p>`
+
+    if (minutos < 10) {
+        msg.innerHTML = `<p>Agora são ${hora}:0${minutos} horas!</p>`
+    } else {
+        msg.innerHTML = `<p>Agora são ${hora}:${minutos} horas!</p>`
+    }
+
     if (hora >= 0 && hora < 12) {
         img.src = 'img/foto-manha.png'
         document.body.style.background = '#e1b28f'
@@ -15,4 +21,12 @@ function carregar() {
         img.src = 'img/foto-noite.png'
         document.body.style.background = '#362D4C'
     }
+
+    window.setInterval('carregar()', 2000)
+
+
+
 }
+
+
+
