@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body class="gradient">
+    <h1 class="outside">Vamos contar</h1>
+    <main class="container">
+        <span class="material-symbols-outlined tema" id="lua" onclick="mudarTema()">
+            dark_mode
+        </span>
+        <span class="material-symbols-outlined tema" id="sol" onclick="mudarTema()">
+            light_mode
+        </span>
+        <label for="inicio">Início:</label>
+        <input type="number" name="inicio" id="inicio" required minlength="0" min="1" max="100">
+        <label for="fim">Fim:</label>
+        <input type="number" name="fim" id="fim" required minlength="0" min="1" max="100">
+        <label for="passo">Passo:</label>
+        <input type="number" name="passo" id="passo" required minlength="0" min="1" max="100">
+        <button type="submit" onclick="contar()" id="btnCont">Contar</button>
+
+        <div>
+            <h3 id="res-title"></h3>
+
+            <p id="res"><span id="chegada"></span></p>
+
+        </div>
+    </main>
+
+
+
+
+    <footer class="outside">&copy;Gabryel Valvano</footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

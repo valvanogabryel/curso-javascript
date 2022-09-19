@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.674);
+}
+
+#res::after {
+    content: '';
+}
+
+#res {
+    font-size: 1.1rem;
+    margin-left: 5px;
+}
+
+.gradient {
+    background: linear-gradient(45deg, #ffcc00, #ff0c5a);
+    background-size: 400%;
+    animation: gradient 5s infinite;
+}
+
+.container {
+    background: whitesmoke;
+    border-radius: 15px;
+    display: block;
+    height: 400px;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.524);
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+#sol {
+    display: none;
+
+}
+
+#lua {
+    display: inline;
+
+}
+
+.dark #sol {
+    display: inline;
+    animation: roll 1s;
+}
+
+.dark #lua {
+    display: none;
+    animation: roll 1s;
+}
+
+
+
+.expand .container {
+    height: 800px;
+}
+
+
+label {
+    display: inline;
+    font-size: 1.2rem;
+    margin: 5px 0 10px 0;
+}
+
+input {
+    display: inline;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    animation: gradient 1s infinite;
+    transition: 0.3s;
+}
+
+.expand button {
+    margin: 0;
+    padding: 0;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ffcc00, #ff0c5a);
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.285);
+}
+
+
+.outside {
+    color: white;
+}
+
+.tema {
+    position: absolute;
+    right: 0%;
+    padding: 0 30px 15px 15px;
+    cursor: pointer;
+    font-size: 36px !important;
+}
+
+#chegada {
+    overflow: hidden;
+    float: inline-end;
+}
+
+footer {
+    position: relative;
+    top: 20%;
+    font-style: italic;
+}
+
+footer:hover {
+    color: rgb(185, 185, 185);
+    cursor: pointer;
+}
+
+.dark .container {
+    background: #181818;
+    color: white;
+    transition: 0.3s;
+}
+
+
+@keyframes gradient {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes roll {
+    from {
+        transform: rotateX(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
