@@ -12,7 +12,9 @@
 </head>
 
 <body class="gradient">
-    <h1 class="outside">Vamos contar</h1>
+    <header>
+        <h1 class="outside">Tabuada</h1>
+    </header>
     <main class="container">
         <span class="material-symbols-outlined tema" id="lua" onclick="mudarTema()">
             dark_mode
@@ -20,19 +22,12 @@
         <span class="material-symbols-outlined tema" id="sol" onclick="mudarTema()">
             light_mode
         </span>
-        <label for="inicio">Início:</label>
-        <input type="number" name="inicio" id="inicio" required minlength="0" min="1" max="100">
-        <label for="fim">Fim:</label>
-        <input type="number" name="fim" id="fim" required minlength="0" min="1" max="100">
-        <label for="passo">Passo:</label>
-        <input type="number" name="passo" id="passo" required minlength="0" min="1" max="100">
-        <button type="submit" onclick="contar()" id="btnCont">Contar</button>
-
         <div>
-            <h3 id="res-title"></h3>
-
-            <p id="res"><span id="chegada"></span></p>
-
+            <p>Número: <input type="number" name="num" id="txtn"></p>
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10"></select>
         </div>
     </main>
 

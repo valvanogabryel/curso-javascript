@@ -33,7 +33,7 @@ h1 {
 }
 
 .gradient {
-    background: linear-gradient(45deg, #ffcc00, #ff0c5a);
+    background: linear-gradient(45deg, #7b6300, #5f0622);
     background-size: 400%;
     animation: gradient 5s infinite;
 }
