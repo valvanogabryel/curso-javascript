@@ -1,12 +1,15 @@
 function parimp(n) {
     if (n % 2 == 0) {
-        return 'par'
+        console.log(`O número foi ${n}`)
+        return 'Par'.toUpperCase()
     } else {
-        return 'impar'
+        console.log(`O número foi ${n}`)
+        return 'Impar'.toUpperCase()
     }
 }
 
-let res = parimp(11)
+
+let res = parimp(Number.parseInt(Math.random() * 11))
 
 
 
