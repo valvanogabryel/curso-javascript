@@ -33,7 +33,14 @@ function adicionar() {
 }
 
 function finalizar() {
-    let maiorValor = Math.max(valores)
+    let maiorValor = Math.max.apply(null, valores)
+    let menorValor = Math.min.apply(null, valores)
+    let soma = 0
+    for (var i = 0; i < valores.length; i++) {
+        soma += valores[i]
+    }
     res.innerHTML = `Ao todo temos ${valores.length} números cadastrados. </br>`
     res.innerHTML += `O maior valor informado foi ${maiorValor}. </br>`
+    res.innerHTML += `O menor valor informado foi ${menorValor}. </br>`
+    res.innerHTML += `Somando todos os valores temos ${soma}.`
 }
