@@ -211,10 +211,16 @@ footer {
     width: 7%;
 }
 
-footer:hover {
-    color: rgba(255, 255, 255, 0.719);
-    cursor: default;
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: 100;
 }
+
+a:hover {
+    color: rgba(255, 255, 255, 0.719);
+}
+
 
 @keyframes animate {
 
