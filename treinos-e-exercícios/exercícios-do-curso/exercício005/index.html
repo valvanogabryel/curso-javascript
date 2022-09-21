@@ -9,26 +9,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="area">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    </div>
     <header>
         <h1 class="white">Analisador de Números</h1>
     </header>
     <section>
+
         <div>
             Número (entre 1 e 100):
             <input type="number" name="fnum" id="fnum">
-            <input type="button" value="Adicionar" onclick="adicionar()">
+            <input type="button" value="Adicionar" onclick="adicionar()" class="btn">
             <br><select name="flista" id="flista" size="6">
 
             </select>
-            <br><input type="button" value="Finalizar" onclick="finalizar()">
+            <br><input type="button" value="Finalizar" onclick="finalizar()" class="btn">
         </div>
 
         <div id="res">
         </div>
     </section>
-
-
     <footer class="white">
         <p>&copy;Gabryel Valvano</p>
     </footer>

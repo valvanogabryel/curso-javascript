@@ -22,11 +22,15 @@ function inLista(n, l) {
 function adicionar() {
     if (isNum(num.value) && !inLista(num.value, valores)) {
         valores.push(num.value)
+        num.value = ''
+        res.innerHTML = ''
+        // createOpt
         let option = document.createElement('option')
         for (let i = 0; i < valores.length; i++) {
             option.text = 'Valor ' + valores[i] + ' adicionado.'
             lista.add(option)
         }
+
     } else {
         alert('Valor inválido ou já encontrado na lista.')
     }
@@ -36,14 +40,13 @@ function finalizar() {
     let maiorValor = Math.max.apply(null, valores)
     let menorValor = Math.min.apply(null, valores)
     let soma = 0
-
+    // calcSoma
     for (let i = 0; i < valores.length; i++) {
         soma += Number.parseInt(valores[i])
     }
-
+    // calcMédia
     for (let i = 0; i < valores.length; i++) {
         var media = soma / valores.length
-
     }
 
     res.innerHTML = `<p>Ao todo temos ${valores.length} números cadastrados.</p> </br>`
