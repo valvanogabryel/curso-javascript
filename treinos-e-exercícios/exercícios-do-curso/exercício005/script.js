@@ -24,7 +24,7 @@ function adicionar() {
         valores.push(num.value)
         let option = document.createElement('option')
         for (let i = 0; i < valores.length; i++) {
-            option.text = valores[i]
+            option.text = 'Valor ' + valores[i] + ' adicionado.'
             lista.add(option)
         }
     } else {
@@ -33,6 +33,7 @@ function adicionar() {
 }
 
 function finalizar() {
-    res.innerHTML = valores
-
+    let maiorValor = Math.max(valores)
+    res.innerHTML = `Ao todo temos ${valores.length} números cadastrados. </br>`
+    res.innerHTML += `O maior valor informado foi ${maiorValor}. </br>`
 }
