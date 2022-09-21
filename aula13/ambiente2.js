@@ -5,7 +5,7 @@ console.log(value.indexOf(6))
 // Mostra a posição do valor indicado
 
 console.log(value.indexOf(9))
-// Se der -1 é porque o número indicado não foi encontrado dentro do vetor
+// Se der -1 é porque o número indicado NÃO foi encontrado dentro do vetor
 
 
 
