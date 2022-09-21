@@ -46,9 +46,9 @@ function finalizar() {
 
     }
 
-    res.innerHTML = `Ao todo temos ${valores.length} números cadastrados. </br>`
-    res.innerHTML += `O maior valor informado foi ${maiorValor}. </br>`
-    res.innerHTML += `O menor valor informado foi ${menorValor}. </br>`
-    res.innerHTML += `Somando todos os valores temos ${soma}. </br>`
-    res.innerHTML += `A média dos valores digitados é ${media}.`
+    res.innerHTML = `<p>Ao todo temos ${valores.length} números cadastrados.</p> </br>`
+    res.innerHTML += `<p>O maior valor informado foi ${maiorValor}.</p> </br>`
+    res.innerHTML += `<p>O menor valor informado foi ${menorValor}.</p> </br>`
+    res.innerHTML += `<p>Somando todos os valores temos ${soma}.</p> </br>`
+    res.innerHTML += `<p>A média dos valores digitados é ${media.toFixed(1)}</p>`
 }
