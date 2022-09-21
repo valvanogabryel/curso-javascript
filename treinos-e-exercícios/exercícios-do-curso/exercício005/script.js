@@ -12,7 +12,7 @@ function isNum(n) {
 }
 
 function inLista(n, l) {
-    if (l.indexOf(Number(n)) != -1) {
+    if (l.indexOf(n) != -1) {
         return true
     } else {
         return false
@@ -27,11 +27,12 @@ function adicionar() {
             option.text = valores[i]
             lista.add(option)
         }
-
-
-
-
     } else {
         alert('Valor inválido ou já encontrado na lista.')
     }
+}
+
+function finalizar() {
+    res.innerHTML = valores
+
 }
