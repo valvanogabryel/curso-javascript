@@ -22,6 +22,7 @@ function inLista(n, l) {
 function adicionar() {
     if (isNum(num.value) && !inLista(num.value, valores)) {
         valores.push(num.value)
+
         num.value = ''
         res.innerHTML = ''
         // createOpt
@@ -30,7 +31,7 @@ function adicionar() {
             option.text = 'Valor ' + valores[i] + ' adicionado.'
             lista.add(option)
         }
-
+        document.getElementById('btn-end').disabled = false
     } else {
         alert('Valor inválido ou já encontrado na lista.')
     }
@@ -49,9 +50,10 @@ function finalizar() {
         var media = soma / valores.length
     }
 
-    res.innerHTML = `<p>Ao todo temos ${valores.length} números cadastrados.</p> </br>`
+    res.innerHTML = `<p>Ao todo temos ${valores.length} número(s) cadastrado(s).</p> </br>`
     res.innerHTML += `<p>O maior valor informado foi ${maiorValor}.</p> </br>`
     res.innerHTML += `<p>O menor valor informado foi ${menorValor}.</p> </br>`
     res.innerHTML += `<p>Somando todos os valores temos ${soma}.</p> </br>`
     res.innerHTML += `<p>A média dos valores digitados é ${media.toFixed(1)}</p>`
+
 }
