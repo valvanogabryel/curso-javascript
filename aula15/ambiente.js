@@ -40,4 +40,8 @@ console.log(`${amigo2.nome} pesa ${amigo2.peso}Kg`)
 console.log(`${amigo1.nome} pesa ${amigo1.peso}Kg`)
 
 
+amizades.pop()
+
+console.log(amizades.length)
+
 
