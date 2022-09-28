@@ -1,5 +1,5 @@
 // OBJETOS
-var amizades = ['amigo', 'amigo1', 'amigo2', 'amigo3', 'amigo4']
+let amizades = ['amigo', 'amigo1', 'amigo2', 'amigo3', 'amigo4']
 let amigo =
 {
     nome: 'José',
@@ -34,6 +34,10 @@ amigo.engordar(1)
 amigo1.engordar(5)
 
 
+
 console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
 console.log(`${amigo2.nome} pesa ${amigo2.peso}Kg`)
 console.log(`${amigo1.nome} pesa ${amigo1.peso}Kg`)
+
+
+
