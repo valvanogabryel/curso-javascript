@@ -33,6 +33,7 @@ amigo2.engordar(2)
 amigo.engordar(1)
 amigo1.engordar(5)
 
+
 console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
 console.log(`${amigo2.nome} pesa ${amigo2.peso}Kg`)
 console.log(`${amigo1.nome} pesa ${amigo1.peso}Kg`)
