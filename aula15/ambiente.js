@@ -1,6 +1,6 @@
 // OBJETOS
-// let amizades = ['amigo', 'amigo1', 'amigo2', 'amigo3', 'amigo4']
-// let amigo =
+// const amizades = ['amigo', 'amigo1', 'amigo2', 'amigo3', 'amigo4']
+// const amigo =
 // {
 //     nome: 'José',
 //     sexo: 'M',
@@ -50,12 +50,51 @@ const amizades =
         {
             nome: 'José',
             sexo: 'M',
-            peso: 85.4
+            peso: 85.4,
+            engordar(p = 0) {
+                this.peso += p
+            }
         },
         {
             nome: 'João',
-     sexo: 'M',
-     peso: 74
+            sexo: 'M',
+            peso: 74,
+            engordar(p = 0) {
+                this.peso += p
+            }
+        },
+        {
+            nome: 'Clarice',
+            sexo: 'F',
+            peso: 65.2,
+            engordar(p = 0) {
+                this.peso += p
+            }
         }
     ]
+amizades[0].engordar(2)
+amizades[1].engordar(2)
+amizades[2].engordar(5)
+amizades.push(
+    {
+        nome: 'Pedro',
+        sexo: 'M',
+        peso: 70,
+        engordar(p = 0) {
+            this.peso += p
+        }
+    }
+)
+
+
+
+
+
+console.log(amizades)
+
+
+console.log(`${amizades[0].nome} pesa ${amizades[0].peso} Kg`)
+console.log(`${amizades[1].nome} pesa ${amizades[1].peso} Kg`)
+console.log(`${amizades[2].nome} pesa ${amizades[2].peso} Kg`)
+
 
