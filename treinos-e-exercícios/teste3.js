@@ -1,4 +1,4 @@
-var hora = new Date().getHours()
+const hora = new Date().getHours()
 
 console.log(`são ${hora} horas.`)
 
