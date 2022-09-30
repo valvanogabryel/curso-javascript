@@ -45,12 +45,17 @@
 // console.log(amizades.length)
 
 
-const amizades = 
-[
-    {
-        nome: 'José',
+const amizades =
+    [
+        {
+            nome: 'José',
+            sexo: 'M',
+            peso: 85.4
+        },
+        {
+            nome: 'João',
      sexo: 'M',
-     peso: 85.4,
-    }
-]
+     peso: 74
+        }
+    ]
 
