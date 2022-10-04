@@ -3,7 +3,6 @@ function contar() {
     var fim = Number.parseInt(document.getElementById('fim').value)
     var passo = Number.parseInt(document.getElementById('passo').value)
     var p = passo
-    var chegada = document.getElementById('chegada')
     var contagem = document.getElementById('res')
 
 
