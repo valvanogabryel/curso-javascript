@@ -1,3 +1,5 @@
+'use strict'
+
 const hora = new Date().getHours()
 
 console.log(`são ${hora} horas.`)
